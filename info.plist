@@ -61,7 +61,7 @@
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
@@ -112,7 +112,7 @@ T = abs(int(sys.argv[1].split()[0]))
 
 if T &lt;= 60:
   time.sleep(T * 60)
-  print(T),
+  print(T)
   exit(0)
 else:
   exit(1)</string>
@@ -147,7 +147,7 @@ else:
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>一键贴图，上传到七牛云</string>
+	<string>世界上最简单的番茄工作法</string>
 	<key>uidata</key>
 	<dict>
 		<key>0F316E26-D317-47A6-AF25-8C58E2706F8B</key>
@@ -179,6 +179,10 @@ else:
 			<integer>380</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
