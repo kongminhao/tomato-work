@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>34C213E5-79DA-420B-827A-1CCB082EA5F1</string>
+				<string>4953041C-729C-467C-B7BC-9C806B3BEDC0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -23,6 +23,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A9186AC1-AEB7-443D-9F7A-90A226E112A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4953041C-729C-467C-B7BC-9C806B3BEDC0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>34C213E5-79DA-420B-827A-1CCB082EA5F1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>2102EB80-3467-4F30-9957-748C6AE8A58B</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5AB8DFE2-59C5-48EF-8CB5-0D7A1544BAC6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -65,7 +90,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>您已经🍅了{query}分钟</string>
+				<string>您已经工作了{query}分钟，快来休息一下吧</string>
 				<key>title</key>
 				<string>番茄提醒</string>
 			</dict>
@@ -73,6 +98,57 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>34C213E5-79DA-420B-827A-1CCB082EA5F1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>2</integer>
+						<key>matchstring</key>
+						<string>10</string>
+						<key>outputlabel</key>
+						<string></string>
+						<key>uid</key>
+						<string>2102EB80-3467-4F30-9957-748C6AE8A58B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4953041C-729C-467C-B7BC-9C806B3BEDC0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>您已经休息了{query}分钟，快来工作一下吧</string>
+				<key>title</key>
+				<string>番茄提醒</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5AB8DFE2-59C5-48EF-8CB5-0D7A1544BAC6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -112,7 +188,7 @@ T = abs(int(sys.argv[1].split()[0]))
 
 if T &lt;= 60:
   time.sleep(T * 60)
-  print(T)
+  sys.stdout.write(str(T))
   exit(0)
 else:
   exit(1)</string>
@@ -160,9 +236,23 @@ else:
 		<key>34C213E5-79DA-420B-827A-1CCB082EA5F1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>70</integer>
+		</dict>
+		<key>4953041C-729C-467C-B7BC-9C806B3BEDC0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>465</integer>
+			<key>ypos</key>
+			<integer>225</integer>
+		</dict>
+		<key>5AB8DFE2-59C5-48EF-8CB5-0D7A1544BAC6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>630</integer>
+			<key>ypos</key>
+			<integer>255</integer>
 		</dict>
 		<key>778ABB38-5F59-49D9-973E-F078717EBEC3</key>
 		<dict>
@@ -174,7 +264,7 @@ else:
 		<key>A9186AC1-AEB7-443D-9F7A-90A226E112A6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>625</integer>
 			<key>ypos</key>
 			<integer>380</integer>
 		</dict>
@@ -182,7 +272,7 @@ else:
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
